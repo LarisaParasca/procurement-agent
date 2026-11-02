@@ -1,0 +1,56 @@
+{
+  "id": "I08",
+  "file": "invoices/I08_instalatii_arithmetic.pdf",
+  "order": 8,
+  "scenario": "arithmetic error",
+  "expectedAgreementKey": "DEV-OF-01",
+  "expectedExtraction": {
+    "series": "IT",
+    "number": "0034",
+    "issueDate": "2026-05-28",
+    "dueDate": "2026-06-27",
+    "issuerCui": "42319871",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "Oferta nr. OF-118/2026"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Execuție instalație electrică bloc C1 — situație de lucrări nr. 1 (40%)",
+        "unit": "serviciu",
+        "quantity": "1",
+        "unitPrice": "74400.00",
+        "net": "74400.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Tablou electric de apartament, echipat",
+        "unit": "buc",
+        "quantity": "12",
+        "unitPrice": "1450.00",
+        "net": "17940.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "92340.00",
+      "vat": "19391.40",
+      "gross": "111731.40"
+    }
+  },
+  "expectedLineTerms": [
+    "t1",
+    "t2"
+  ],
+  "expectedIssues": [
+    {
+      "code": "ARITHMETIC_LINE",
+      "severity": "reject",
+      "lineNo": 2
+    }
+  ],
+  "expectedVerdict": "REJECT"
+}

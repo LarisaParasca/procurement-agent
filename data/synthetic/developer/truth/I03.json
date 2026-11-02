@@ -1,0 +1,50 @@
+{
+  "id": "I03",
+  "file": "invoices/I03_otel_quantity_over.pdf",
+  "order": 3,
+  "scenario": "quantity over agreed",
+  "expectedAgreementKey": "DEV-PO-01",
+  "expectedExtraction": {
+    "series": "OTD",
+    "number": "0162",
+    "issueDate": "2026-04-10",
+    "dueDate": "2026-05-10",
+    "issuerCui": "29145670",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "PO-2026-0031"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Oțel beton PC52 Ø16",
+        "unit": "t",
+        "quantity": "20",
+        "unitPrice": "4150.00",
+        "net": "83000.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "83000.00",
+      "vat": "17430.00",
+      "gross": "100430.00"
+    }
+  },
+  "expectedLineTerms": [
+    "t2"
+  ],
+  "expectedIssues": [
+    {
+      "code": "QUANTITY_ABOVE_AGREED",
+      "severity": "review",
+      "lineNo": 1
+    },
+    {
+      "code": "CUMULATIVE_THRESHOLD",
+      "severity": "review"
+    }
+  ],
+  "expectedVerdict": "REVIEW"
+}

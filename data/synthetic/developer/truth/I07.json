@@ -1,0 +1,56 @@
+{
+  "id": "I07",
+  "file": "invoices/I07_finisaje_item_not_covered.pdf",
+  "order": 7,
+  "scenario": "item not covered",
+  "expectedAgreementKey": "DEV-DV-01",
+  "expectedExtraction": {
+    "series": "FM",
+    "number": "077",
+    "issueDate": "2026-05-20",
+    "dueDate": "2026-06-19",
+    "issuerCui": "33490219",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "Deviz nr. DV-07/2026"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Tencuială mecanizată interioară pe bază de ipsos",
+        "unit": "mp",
+        "quantity": "1200",
+        "unitPrice": "38.00",
+        "net": "45600.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Transport și evacuare moloz",
+        "unit": "serviciu",
+        "quantity": "1",
+        "unitPrice": "2800.00",
+        "net": "2800.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "48400.00",
+      "vat": "10164.00",
+      "gross": "58564.00"
+    }
+  },
+  "expectedLineTerms": [
+    "t1",
+    null
+  ],
+  "expectedIssues": [
+    {
+      "code": "ITEM_NOT_COVERED",
+      "severity": "review",
+      "lineNo": 2
+    }
+  ],
+  "expectedVerdict": "REVIEW"
+}

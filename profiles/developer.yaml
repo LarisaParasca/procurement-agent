@@ -1,0 +1,61 @@
+# Company profile: construction company / residential developer (FICTIONAL).
+# Everything here is configuration — no code changes are needed to adapt it.
+id: developer
+displayName: "Constructii Exemplu SRL (date fictive)"
+ownParty:
+  name: "Constructii Exemplu SRL"
+  cui: "40000000"
+
+acceptedReferenceTypes: [contract, purchase_order, offer, cost_estimate, email_acceptance]
+
+currency:
+  default: RON
+
+# VAT rates are dated: Romania moved 19% → 21% and 5%/9% → 11% on 2025-08-01.
+vat:
+  rates:
+    - { rate: "21", validFrom: "2025-08-01" }
+    - { rate: "11", validFrom: "2025-08-01" }
+    - { rate: "19", validTo: "2025-07-31" }
+    - { rate: "9", validTo: "2025-07-31" }
+    - { rate: "5", validTo: "2025-07-31" }
+    - { rate: "0" }
+
+tolerances:
+  unitPricePct: "2"      # up to 2% above the agreed unit price is accepted
+  unitPriceAbs: "0"
+  quantityPct: "0"
+  amountAbs: "1.00"
+  roundingAbs: "0.02"
+
+matching:
+  autoMatchMin: 0.9
+  llmMatchMin: 0.75
+  lineMatchMin: 0.8
+  maxLlmCandidates: 5
+
+extraction:
+  reviewBelow: 0.85
+
+alerts:
+  cumulative: [0.8, 1.0]  # warn at 80% of a contract/term, flag at 100%
+
+# Rules not listed here are disabled. severity: info | review | reject
+rules:
+  DUPLICATE_INVOICE:         { severity: reject }
+  NO_MATCHING_AGREEMENT:     { severity: review }
+  LOW_MATCH_CONFIDENCE:      { severity: review }
+  CURRENCY_MISMATCH:         { severity: review }
+  DATE_OUTSIDE_VALIDITY:     { severity: review }
+  ITEM_NOT_COVERED:          { severity: review }
+  UNIT_PRICE_ABOVE_AGREED:   { severity: review }
+  QUANTITY_ABOVE_AGREED:     { severity: review }
+  CUMULATIVE_THRESHOLD:      { severity: review }
+  ARITHMETIC_LINE:           { severity: reject }
+  ARITHMETIC_TOTALS:         { severity: reject }
+  VAT_RATE_INVALID:          { severity: review }
+
+report:
+  language: ro
+  audience: "angajat din departamentul financiar, fără pregătire tehnică"
+  emailTone: "formal, cordial, la obiect"

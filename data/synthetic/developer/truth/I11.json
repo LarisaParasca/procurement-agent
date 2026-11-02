@@ -1,0 +1,50 @@
+{
+  "id": "I11",
+  "file": "invoices/I11_finisaje_scanned.pdf",
+  "order": 11,
+  "scenario": "scanned-looking (clean)",
+  "expectedAgreementKey": "DEV-DV-01",
+  "expectedExtraction": {
+    "series": "FM",
+    "number": "091",
+    "issueDate": "2026-06-18",
+    "dueDate": "2026-07-18",
+    "issuerCui": "33490219",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "Deviz nr. DV-07/2026"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Montaj gresie și faianță (manoperă)",
+        "unit": "mp",
+        "quantity": "450",
+        "unitPrice": "62.00",
+        "net": "27900.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Glet de ipsos și vopsea lavabilă, 2 straturi",
+        "unit": "mp",
+        "quantity": "2000",
+        "unitPrice": "29.00",
+        "net": "58000.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "85900.00",
+      "vat": "18039.00",
+      "gross": "103939.00"
+    }
+  },
+  "expectedLineTerms": [
+    "t2",
+    "t3"
+  ],
+  "expectedIssues": [],
+  "expectedVerdict": "APPROVE"
+}

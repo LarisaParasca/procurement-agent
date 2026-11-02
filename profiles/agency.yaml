@@ -1,0 +1,57 @@
+# Company profile: real estate agency (FICTIONAL).
+# Phase 1: schema-valid skeleton. Phase 2 adds synthetic data and tunes these values.
+id: agency
+displayName: "Imobiliare Exemplu SRL (date fictive)"
+ownParty:
+  name: "Imobiliare Exemplu SRL"
+  cui: "40000018"
+
+acceptedReferenceTypes: [brokerage, lease, contract, email_acceptance]
+
+currency:
+  default: RON
+
+vat:
+  rates:
+    - { rate: "21", validFrom: "2025-08-01" }
+    - { rate: "19", validTo: "2025-07-31" }
+    - { rate: "0" }
+
+tolerances:
+  unitPricePct: "0"
+  unitPriceAbs: "0"
+  quantityPct: "0"
+  amountAbs: "1.00"
+  roundingAbs: "0.02"
+
+matching:
+  autoMatchMin: 0.9
+  llmMatchMin: 0.75
+  lineMatchMin: 0.8
+  maxLlmCandidates: 5
+
+extraction:
+  reviewBelow: 0.85
+
+alerts:
+  cumulative: [1.0]
+
+rules:
+  DUPLICATE_INVOICE:          { severity: reject }
+  NO_MATCHING_AGREEMENT:      { severity: review }
+  LOW_MATCH_CONFIDENCE:       { severity: review }
+  CURRENCY_MISMATCH:          { severity: review }
+  DATE_OUTSIDE_VALIDITY:      { severity: review }
+  ITEM_NOT_COVERED:           { severity: review }
+  PERCENTAGE_MISMATCH:        { severity: review }
+  RECURRING_AMOUNT_MISMATCH:  { severity: review }
+  RECURRING_PERIOD_INVALID:   { severity: review }
+  RECURRING_PERIOD_DUPLICATE: { severity: reject }
+  ARITHMETIC_LINE:            { severity: reject }
+  ARITHMETIC_TOTALS:          { severity: reject }
+  VAT_RATE_INVALID:           { severity: review }
+
+report:
+  language: ro
+  audience: "agent imobiliar / contabil, fără pregătire tehnică"
+  emailTone: "politicos, clar, orientat spre client"

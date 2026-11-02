@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.cache/
+data/synthetic/**/*.pdf
+reports/*
+!reports/.gitkeep
+!reports/samples/
+.DS_Store

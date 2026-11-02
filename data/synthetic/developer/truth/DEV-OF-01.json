@@ -1,0 +1,44 @@
+{
+  "key": "DEV-OF-01",
+  "file": "references/DEV-OF-01_oferta_instalatii.pdf",
+  "documentType": "offer",
+  "number": "OF-118/2026",
+  "parties": [
+    {
+      "name": "Instalații Test SRL",
+      "cui": "42319871",
+      "vatPayer": true,
+      "role": "supplier"
+    },
+    {
+      "name": "Constructii Exemplu SRL",
+      "cui": "40000000",
+      "vatPayer": true,
+      "role": "buyer"
+    }
+  ],
+  "currency": "RON",
+  "validity": {
+    "from": "2026-03-15",
+    "to": "2026-12-31"
+  },
+  "terms": [
+    {
+      "id": "t1",
+      "kind": "fixed_amount",
+      "description": "Execuție instalație electrică bloc C1, conform proiect E-12/2026",
+      "aliases": [],
+      "amount": "186000.00",
+      "allowInstallments": true
+    },
+    {
+      "id": "t2",
+      "kind": "unit_item",
+      "description": "Tablou electric de apartament, echipat",
+      "aliases": [],
+      "unit": "buc",
+      "unitPrice": "1450.00",
+      "maxQuantity": "48"
+    }
+  ]
+}

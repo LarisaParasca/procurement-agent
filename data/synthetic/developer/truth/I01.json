@@ -1,0 +1,50 @@
+{
+  "id": "I01",
+  "file": "invoices/I01_otel_clean.pdf",
+  "order": 1,
+  "scenario": "clean",
+  "expectedAgreementKey": "DEV-PO-01",
+  "expectedExtraction": {
+    "series": "OTD",
+    "number": "0145",
+    "issueDate": "2026-03-20",
+    "dueDate": "2026-04-19",
+    "issuerCui": "29145670",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "Comanda nr. PO-2026-0031"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Oțel beton PC52 Ø12",
+        "unit": "t",
+        "quantity": "8.5",
+        "unitPrice": "4180.00",
+        "net": "35530.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Plasă sudată Ø6 100x100",
+        "unit": "buc",
+        "quantity": "100",
+        "unitPrice": "165.00",
+        "net": "16500.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "52030.00",
+      "vat": "10926.30",
+      "gross": "62956.30"
+    }
+  },
+  "expectedLineTerms": [
+    "t1",
+    "t3"
+  ],
+  "expectedIssues": [],
+  "expectedVerdict": "APPROVE"
+}

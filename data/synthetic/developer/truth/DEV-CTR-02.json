@@ -1,0 +1,55 @@
+{
+  "key": "DEV-CTR-02",
+  "file": "references/DEV-CTR-02_contract_betoane.pdf",
+  "documentType": "contract",
+  "number": "CB-2026-007",
+  "parties": [
+    {
+      "name": "Betoane Exemplu SA",
+      "cui": "17654328",
+      "vatPayer": true,
+      "role": "supplier"
+    },
+    {
+      "name": "Constructii Exemplu SRL",
+      "cui": "40000000",
+      "vatPayer": true,
+      "role": "buyer"
+    }
+  ],
+  "currency": "RON",
+  "validity": {
+    "from": "2026-02-01",
+    "to": "2026-09-30"
+  },
+  "totalCap": "250000",
+  "terms": [
+    {
+      "id": "t1",
+      "kind": "unit_item",
+      "description": "Beton C25/30, clasa de expunere XC2",
+      "aliases": [],
+      "unit": "mc",
+      "unitPrice": "465.00",
+      "maxQuantity": "400"
+    },
+    {
+      "id": "t2",
+      "kind": "unit_item",
+      "description": "Beton C16/20",
+      "aliases": [],
+      "unit": "mc",
+      "unitPrice": "410.00",
+      "maxQuantity": "120"
+    },
+    {
+      "id": "t3",
+      "kind": "unit_item",
+      "description": "Pompare beton cu autopompă",
+      "aliases": [],
+      "unit": "ora",
+      "unitPrice": "350.00",
+      "maxQuantity": "80"
+    }
+  ]
+}

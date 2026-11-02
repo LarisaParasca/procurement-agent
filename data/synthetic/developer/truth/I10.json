@@ -1,0 +1,48 @@
+{
+  "id": "I10",
+  "file": "invoices/I10_materiale_no_reference.pdf",
+  "order": 10,
+  "scenario": "no reference (fuzzy match)",
+  "expectedAgreementKey": "DEV-PO-02",
+  "expectedExtraction": {
+    "series": "MFC",
+    "number": "2026-0387",
+    "issueDate": "2026-05-06",
+    "dueDate": "2026-06-05",
+    "issuerCui": "38123450",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Blocuri BCA 625x250x300",
+        "unit": "mc",
+        "quantity": "42",
+        "unitPrice": "395.00",
+        "net": "16590.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Mortar adeziv pt. zidărie BCA 25kg",
+        "unit": "sac",
+        "quantity": "120",
+        "unitPrice": "33.00",
+        "net": "3960.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "20550.00",
+      "vat": "4315.50",
+      "gross": "24865.50"
+    }
+  },
+  "expectedLineTerms": [
+    "t1",
+    "t2"
+  ],
+  "expectedIssues": [],
+  "expectedVerdict": "APPROVE"
+}

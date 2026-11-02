@@ -1,0 +1,54 @@
+{
+  "key": "DEV-DV-01",
+  "file": "references/DEV-DV-01_deviz_finisaje.pdf",
+  "documentType": "cost_estimate",
+  "number": "DV-07/2026",
+  "parties": [
+    {
+      "name": "Finisaje Model SRL",
+      "cui": "33490219",
+      "vatPayer": true,
+      "role": "supplier"
+    },
+    {
+      "name": "Constructii Exemplu SRL",
+      "cui": "40000000",
+      "vatPayer": true,
+      "role": "buyer"
+    }
+  ],
+  "currency": "RON",
+  "validity": {
+    "from": "2026-04-01",
+    "to": "2026-11-30"
+  },
+  "terms": [
+    {
+      "id": "t1",
+      "kind": "unit_item",
+      "description": "Tencuială mecanizată interioară pe bază de ipsos",
+      "aliases": [],
+      "unit": "mp",
+      "unitPrice": "38.00",
+      "maxQuantity": "6500"
+    },
+    {
+      "id": "t2",
+      "kind": "unit_item",
+      "description": "Montaj gresie și faianță (manoperă)",
+      "aliases": [],
+      "unit": "mp",
+      "unitPrice": "62.00",
+      "maxQuantity": "2100"
+    },
+    {
+      "id": "t3",
+      "kind": "unit_item",
+      "description": "Glet de ipsos și vopsea lavabilă, 2 straturi",
+      "aliases": [],
+      "unit": "mp",
+      "unitPrice": "29.00",
+      "maxQuantity": "7000"
+    }
+  ]
+}

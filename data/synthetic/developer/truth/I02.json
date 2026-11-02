@@ -1,0 +1,56 @@
+{
+  "id": "I02",
+  "file": "invoices/I02_materiale_price_over.pdf",
+  "order": 2,
+  "scenario": "price over agreed",
+  "expectedAgreementKey": "DEV-CTR-01",
+  "expectedExtraction": {
+    "series": "MFC",
+    "number": "2026-0311",
+    "issueDate": "2026-03-25",
+    "dueDate": "2026-04-24",
+    "issuerCui": "38123450",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "Contract nr. CA-2026-014"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Ciment CEM II/A-LL 42.5R",
+        "unit": "sac",
+        "quantity": "400",
+        "unitPrice": "33.90",
+        "net": "13560.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Var hidratat, sac 20 kg",
+        "unit": "sac",
+        "quantity": "100",
+        "unitPrice": "18.40",
+        "net": "1840.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "15400.00",
+      "vat": "3234.00",
+      "gross": "18634.00"
+    }
+  },
+  "expectedLineTerms": [
+    "t1",
+    "t3"
+  ],
+  "expectedIssues": [
+    {
+      "code": "UNIT_PRICE_ABOVE_AGREED",
+      "severity": "review",
+      "lineNo": 1
+    }
+  ],
+  "expectedVerdict": "REVIEW"
+}

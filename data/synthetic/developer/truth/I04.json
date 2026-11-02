@@ -1,0 +1,50 @@
+{
+  "id": "I04",
+  "file": "invoices/I04_betoane_partial_1.pdf",
+  "order": 4,
+  "scenario": "cumulative 1/3 (partial delivery)",
+  "expectedAgreementKey": "DEV-CTR-02",
+  "expectedExtraction": {
+    "series": "BEX",
+    "number": "1021",
+    "issueDate": "2026-03-10",
+    "dueDate": "2026-04-09",
+    "issuerCui": "17654328",
+    "recipientCui": "40000000",
+    "currency": "RON",
+    "references": [
+      "Contract nr. CB-2026-007"
+    ],
+    "lines": [
+      {
+        "lineNo": 1,
+        "description": "Beton C25/30, clasa de expunere XC2",
+        "unit": "mc",
+        "quantity": "180",
+        "unitPrice": "465.00",
+        "net": "83700.00",
+        "vatRate": "21"
+      },
+      {
+        "lineNo": 2,
+        "description": "Pompare beton cu autopompă",
+        "unit": "ora",
+        "quantity": "20",
+        "unitPrice": "350.00",
+        "net": "7000.00",
+        "vatRate": "21"
+      }
+    ],
+    "totals": {
+      "net": "90700.00",
+      "vat": "19047.00",
+      "gross": "109747.00"
+    }
+  },
+  "expectedLineTerms": [
+    "t1",
+    "t3"
+  ],
+  "expectedIssues": [],
+  "expectedVerdict": "APPROVE"
+}
